@@ -4,7 +4,8 @@
       <div class="logo">
         <img src="@/assets/logo.png" alt="logo"/>
       </div>
-      <ActionButton action="Inscreva-se" link="https://docs.google.com/forms/d/e/1FAIpQLSerFi5Jv7Zh70xrVXzH6426DRS09IRWhsluNVAiAqrHGHPP1w/viewform"/>
+      <ActionButton action="Inscreva-se"
+                    link="https://docs.google.com/forms/d/e/1FAIpQLSerFi5Jv7Zh70xrVXzH6426DRS09IRWhsluNVAiAqrHGHPP1w/viewform"/>
     </div>
     <div class="love">
       <img src="../assets/love.jpeg">
@@ -18,18 +19,13 @@
       </iframe>
     </div>
 <!--    <div class="images">-->
-<!--      <div>-->
-<!--        <img src="../assets/facebook.png" >-->
+<!--      <div class="right">-->
+<!--        <img src="../assets/2.jpg">-->
+<!--        <img src="../assets/3.jpg">-->
 <!--      </div>-->
-<!--      <div>-->
-<!--        <div class="right">-->
-<!--          <img src="../assets/facebook.png" >-->
-<!--          <img src="../assets/facebook.png" >-->
-<!--        </div>-->
-<!--        <div class="right">-->
-<!--          <img src="../assets/facebook.png" >-->
-<!--          <img src="../assets/facebook.png" >-->
-<!--        </div>-->
+<!--      <div class="right">-->
+<!--        <img src="../assets/4.jpg">-->
+<!--        <img src="../assets/5.jpg">-->
 <!--      </div>-->
 <!--    </div>-->
     <div class="info">
@@ -64,7 +60,7 @@
         />
       </div>
       <div class="doc">
-        <span>CALENDAR</span>
+        <img src="../assets/calendar.jpg">
       </div>
     </div>
     <div class="join-team">
@@ -74,7 +70,8 @@
           warn="Vagas limitadas"
       >
         <div class="action">
-          <ActionButton action="Garanta a inscrição" link="https://docs.google.com/forms/d/e/1FAIpQLSerFi5Jv7Zh70xrVXzH6426DRS09IRWhsluNVAiAqrHGHPP1w/viewform"/>
+          <ActionButton action="Garanta a inscrição"
+                        link="https://docs.google.com/forms/d/e/1FAIpQLSerFi5Jv7Zh70xrVXzH6426DRS09IRWhsluNVAiAqrHGHPP1w/viewform"/>
         </div>
       </Banner>
     </div>
@@ -84,7 +81,8 @@
           subtitle="Estamos disponíveis pelo WhatsApp."
       >
         <div class="action">
-          <ActionButton action="Entre em contato" link="https://api.whatsapp.com/send/?phone=556135430366&text=Ol%C3%A1%2C+interessei-me+pelo+projeto+e+gostaria+de+mais+detalhes.&type=phone_number&app_absent=0"/>
+          <ActionButton action="Entre em contato"
+                        link="https://api.whatsapp.com/send/?phone=556135430366&text=Ol%C3%A1%2C+interessei-me+pelo+projeto+e+gostaria+de+mais+detalhes.&type=phone_number&app_absent=0"/>
         </div>
       </Banner>
     </div>
@@ -145,15 +143,13 @@ export default class Homepage extends Vue {}
 
   .images {
     display: flex;
-    justify-content: space-around;
-
-    .right {
-      display: flex;
-      background-color: tomato;
-    }
+    justify-content: center;
+    margin-top: 48px;
 
     img {
-      width: 250px;
+      width: 300px;
+      height: 200px;
+      margin-left: 24px;
     }
   }
 
@@ -224,6 +220,10 @@ export default class Homepage extends Vue {}
     .doc {
       display: flex;
       align-items: center;
+
+      img {
+        height: 400px;
+      }
     }
   }
 
@@ -259,6 +259,24 @@ export default class Homepage extends Vue {}
 
       img {
         width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .homepage {
+    .calendar {
+      display: block;
+
+      .doc {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        img {
+          height: 250px;
+        }
       }
     }
   }
