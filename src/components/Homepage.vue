@@ -18,16 +18,12 @@
               src="https://www.youtube.com/embed/RD7ziUammxA">
       </iframe>
     </div>
-<!--    <div class="images">-->
-<!--      <div class="right">-->
-<!--        <img src="../assets/2.jpg">-->
-<!--        <img src="../assets/3.jpg">-->
-<!--      </div>-->
-<!--      <div class="right">-->
-<!--        <img src="../assets/4.jpg">-->
-<!--        <img src="../assets/5.jpg">-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="images">
+        <img src="../assets/2.jpg">
+        <img src="../assets/3.jpg">
+        <img src="../assets/4.jpg">
+        <img src="../assets/5.jpg">
+    </div>
     <div class="info">
       <span>A cura de Deus através do testemunho de pessoas que já vivenciaram esta experiência.</span>
     </div>
@@ -142,14 +138,16 @@ export default class Homepage extends Vue {}
   }
 
   .images {
-    display: flex;
-    justify-content: center;
     margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     img {
-      width: 300px;
-      height: 200px;
-      margin-left: 24px;
+      margin: 16px;
+      width: 400px;
+      //width: screen.width;
+      //margin-left: 24px;
     }
   }
 
