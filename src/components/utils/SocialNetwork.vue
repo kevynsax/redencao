@@ -1,38 +1,45 @@
 <template>
-  <div class="social-network" @click="openLink">
-    <span>{{ symbol }}</span>
-    <slot></slot>
-  </div>
+    <div class="social-network" @click="openLink">
+        <img :src="image" :alt="symbol"/>
+    </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 
 @Options({
-  props: {
-    symbol: String,
-    link: String,
-  },
+    props: {
+        symbol: String,
+        link: String,
+    },
 })
 export default class SocialNetwork extends Vue {
-  symbol!: string;
-  link!: string;
+    symbol!: string;
+    link!: string;
 
-  private openLink(): void {
-    window.open(this.link, '_blank');
-  };
+    private openLink(): void {
+        window.open(this.link, '_blank');
+    };
+
+    public get image(): string {
+        return require(`../../assets/${this.symbol.toLowerCase()}.png`);
+    }
 }
 
 </script>
 
 <style scoped lang="scss">
 .social-network {
-  padding: 8px 16px;
-  border-radius: 4px;
+    border-radius: 4px;
 
-  background-color: #000000;
-  color: #ffffff;
+    color: #ffffff;
 
-  cursor: pointer;
+    cursor: pointer;
+
+    &:hover{
+        img{
+            filter: invert(.3);
+        }
+    }
 }
 </style>
