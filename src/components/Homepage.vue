@@ -90,7 +90,7 @@
                 <div class="action">
                     <ActionButton
                         action="Entre em contato"
-                        link="https://api.whatsapp.com/send/?phone=556135430366&text=Ol%C3%A1%2C+interessei-me+pelo+projeto+e+gostaria+de+mais+detalhes.&type=phone_number&app_absent=0"
+                        link="https://api.whatsapp.com/send/?phone=5561995062260&text=Ol%C3%A1%2C+interessei-me+pelo+projeto+e+gostaria+de+mais+detalhes.&type=phone_number&app_absent=0"
                         background="#58EF5D"
                     />
                 </div>
